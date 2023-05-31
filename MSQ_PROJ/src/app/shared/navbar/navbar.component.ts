@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent {
-
+  name = 'Angular';
+  public isCollapsed = true;
 }
