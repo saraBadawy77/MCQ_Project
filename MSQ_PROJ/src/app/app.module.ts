@@ -5,12 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { WelcomePageComponent } from './shared/welcome-page/welcome-page.component';
+import { TeacherFormComponent } from './Teacher/Teacher_form/teacher-form/teacher-form.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
-    WelcomePageComponent
+    WelcomePageComponent,
+    TeacherFormComponent
   ],
   imports: [
     BrowserModule,
