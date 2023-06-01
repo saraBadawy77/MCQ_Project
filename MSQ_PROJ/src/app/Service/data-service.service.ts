@@ -7,14 +7,14 @@ import { HttpClient } from '@angular/common/http';
 })
 export class DataServiceService {
 
-  baseUrl:string="http://localhost:3005/"
+  studentsUrl:string="http://localhost:3000/Students"
   constructor(private http:HttpClient ) {}
   getStudentbyId(studentId:number){
-    return this.http.get(`${this.baseUrl}/${studentId}`)
+    return this.http.get(`${this.studentsUrl}/${studentId}`)
   }
 
   addStudent(student:any){
-    return this.http.post(this.baseUrl,student)
+    return this.http.post(this.studentsUrl,student)
   }
 
 }
