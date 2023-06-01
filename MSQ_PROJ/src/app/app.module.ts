@@ -5,7 +5,6 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { WelcomePageComponent } from './shared/welcome-page/welcome-page.component';
 import { MakeExamComponent } from './Teacher/Componants/Create/make-exam/make-exam.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatButtonModule} from '@angular/material/button';
 import {MatTabsModule} from '@angular/material/tabs';
 import {FormControl, Validators, FormsModule, ReactiveFormsModule} from '@angular/forms';
@@ -16,6 +15,11 @@ import { HttpClientModule } from '@angular/common/http';
 import {MatRadioModule} from '@angular/material/radio'
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { LoginFormComponent } from './shared/login-form/login-form.component';
+import { ToastNoAnimation, ToastNoAnimationModule } from 'ngx-toastr';
+import { CommonModule } from '@angular/common';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastrModule } from 'ngx-toastr';
+
 
 
 @NgModule({
@@ -28,6 +32,9 @@ import { LoginFormComponent } from './shared/login-form/login-form.component';
   
   ],
   imports: [
+    CommonModule,
+    BrowserAnimationsModule,
+    ToastNoAnimationModule.forRoot(),
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,

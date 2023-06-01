@@ -1,4 +1,9 @@
 import { Component } from '@angular/core';
+import { bootstrapApplication } from '@angular/platform-browser';
+import { provideAnimations } from '@angular/platform-browser/animations';
+
+import { provideToastr } from 'ngx-toastr';
+
 
 @Component({
   selector: 'app-root',
@@ -15,3 +20,9 @@ export class AppComponent {
 
 
   // })
+  bootstrapApplication(AppComponent, {
+    providers: [
+      provideAnimations(), // required animations providers
+      provideToastr(), // Toastr providers
+    ]
+  });

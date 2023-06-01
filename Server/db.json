@@ -1,14 +1,109 @@
 {
-    "admin": [
-      { "id": 1, "email": "admin@msq.com", "password": "123456" }
-    ],
-    "Students": [
-      { "id":1, "name": "Ahmed","email": "Ahmed@msq.com", "password": "123456" },
-      { "id":2, "name": "Ali",  "email": "Ali@msq.com",   "password": "123456" },
-      { "id":3, "name": "mona" ,"email": "mona@msq.com",  "password": "123456" },
-      { "id":4, "name": "Soha", "email": "Soha@msq.com",  "password": "123456" },
-      { "id":5, "name": "Ola",  "email": "Ola@msq.com",   "password": "123456" },
-      { "id":6, "name": "Hana", "email": "Hana@msq.com",  "password": "123456" }
-
-    ]
-  }
+  "teacher": [
+    {
+      "id": 1,
+      "email": "admin@msq.com",
+      "password": "123456"
+    }
+  ],
+  "Students": [
+    {
+      "id": 1,
+      "name": "Ahmed",
+      "email": "Ahmed@msq.com",
+      "password": "123456"
+    },
+    {
+      "id": 2,
+      "name": "Ali",
+      "email": "Ali@msq.com",
+      "password": "123456"
+    },
+    {
+      "id": 3,
+      "name": "mona",
+      "email": "mona@msq.com",
+      "password": "123456"
+    },
+    {
+      "id": 4,
+      "name": "Soha",
+      "email": "Soha@msq.com",
+      "password": "123456"
+    },
+    {
+      "id": 5,
+      "name": "Ola",
+      "email": "Ola@msq.com",
+      "password": "123456"
+    },
+    {
+      "id": 6,
+      "name": "Hana",
+      "email": "Hana@msq.com",
+      "password": "123456"
+    },
+    {
+      "email": "ahmed_c44@outlook.com",
+      "password": "fwefwefwe",
+      "id": 7
+    },
+    {
+      "email": "ahmed_c44@outlook.com",
+      "password": "fwefwefwe",
+      "id": 8
+    },
+    {
+      "email": "ahmed_c44@outlook.com",
+      "password": "m,mswssq",
+      "id": 9
+    },
+    {
+      "email": "ahmed_c44@outlook.com",
+      "password": "123456789",
+      "id": 10
+    },
+    {
+      "email": "ahmed_c44@outlook.com",
+      "password": "123456789",
+      "id": 11
+    },
+    {
+      "email": "ahmed_c44@outlook.com",
+      "password": "123456789",
+      "id": 12
+    },
+    {
+      "email": "ahmed_c44@outlook.com",
+      "password": "123456789",
+      "id": 13
+    },
+    {
+      "email": "ahmed_c44@outlook.com",
+      "password": "123456789",
+      "id": 14
+    },
+    {
+      "email": "ahmed_c44@outlook.com",
+      "password": "123456789",
+      "id": 15
+    },
+    {
+      "email": "ahmed_c44@outlook.com",
+      "password": "123456789",
+      "id": 16
+    },
+    {
+      "email": "ahmed_c44@outlook.com",
+      "password": "123456789",
+      "id": 17
+    }
+  ],
+  "logins": [
+    {
+      "role": "teacher",
+      "userId": 1,
+      "id": 1
+    }
+  ]
+}
