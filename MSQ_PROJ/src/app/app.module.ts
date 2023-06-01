@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
+import { RegisterComponent } from './shared/register/register.component';
 import { WelcomePageComponent } from './shared/welcome-page/welcome-page.component';
 import { MakeExamComponent } from './Teacher/Componants/Create/make-exam/make-exam.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -22,6 +23,7 @@ import { LoginFormComponent } from './shared/login-form/login-form.component';
   declarations: [
     AppComponent,
     NavbarComponent,
+    RegisterComponent,
     WelcomePageComponent,
     MakeExamComponent,
     LoginFormComponent
