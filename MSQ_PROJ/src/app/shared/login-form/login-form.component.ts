@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 // import {MatRadioModule} from '@angular/material/radio'
 import { HttpClient, HttpClientModule } from '@angular/common/http';
-
-
+//import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { ActivatedRoute, Router,Route } from '@angular/router';
+import { DataServiceService } from 'src/app/Service/data-service.service';
 
 @Component({
   selector: 'app-login-form',
