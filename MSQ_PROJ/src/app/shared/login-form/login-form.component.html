@@ -1,6 +1,12 @@
-<div class="row align-items-center justify-content-md-center " style="height: 700px;">
+<div class="row align-items-center justify-content-md-center bg-secondary" style="height: 700px;">
     <div class="container" style="width: 700px; ">
       <form>
+        <div class="col-sm-12 mb-3 text-dark">        
+            <mat-radio-group class="bg-secondry"> 
+                <mat-radio-button value="students"  class="w-25 text-dark" color="primary">Student</mat-radio-button>
+                <mat-radio-button value="doctor" class="w-25    text-dark" color="primary">Teacher</mat-radio-button>
+            </mat-radio-group>
+        </div>
           <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Email address</label>
             <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
@@ -12,7 +18,7 @@
           <div class="mb-3 form-check">
             <a href=""> Register</a>
           </div>
-          <button type="submit" class="btn btn-primary">Submit</button>
+          <button type="submit" class="btn btn-primary">Login</button>
         </form>
     </div>   
   </div>
