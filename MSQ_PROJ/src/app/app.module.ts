@@ -9,6 +9,7 @@ import { RegisterComponent } from './shared/register/register.component';
 import {MatRadioModule} from '@angular/material/radio'
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     RegisterComponent
   ],
   imports: [
+    HttpClientModule,
     MatSlideToggleModule,
     MatRadioModule,
     BrowserModule,
