@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
@@ -13,6 +12,10 @@ import {FormControl, Validators, FormsModule, ReactiveFormsModule} from '@angula
 import {NgIf} from '@angular/common';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
+import { HttpClientModule } from '@angular/common/http';
+import {MatRadioModule} from '@angular/material/radio'
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { LoginFormComponent } from './shared/login-form/login-form.component';
 
 
 @NgModule({
@@ -21,12 +24,15 @@ import {MatFormFieldModule} from '@angular/material/form-field';
     NavbarComponent,
     WelcomePageComponent,
     MakeExamComponent,
-  
+    LoginFormComponent
   
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
+    MatSlideToggleModule,
+    MatRadioModule,
     BrowserAnimationsModule,
     MatButtonModule,
     MatTabsModule,
@@ -42,3 +48,6 @@ import {MatFormFieldModule} from '@angular/material/form-field';
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+
+
