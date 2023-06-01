@@ -2,12 +2,14 @@ import { Component, OnInit } from '@angular/core';
 import {MatRadioModule} from '@angular/material/radio'
 import { Router } from '@angular/router';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder } from '@angular/forms';
 import { LoginServiceService } from 'src/app/Service/login-service.service';
 import { ToastrService } from 'ngx-toastr';
 import { AuthService } from 'src/app/auth/sevices/auth.service';
-
-
+//import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { ActivatedRoute,Route } from '@angular/router';
+import { DataServiceService } from 'src/app/Service/data-service.service';
 
 @Component({
   selector: 'app-login-form',

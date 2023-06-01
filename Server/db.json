@@ -103,7 +103,40 @@
     {
       "role": "teacher",
       "userId": 1,
-      "id": 1
+      "studentName": "mohamed",
+      "studentEmail": "mohamed",
+      "studentPassword": "1234567",
+      "id": 7
+    },
+    {
+      "studentName": "mohamed",
+      "studentEmail": "mohamed",
+      "studentPassword": "123456789",
+      "id": 8
+    },
+    {
+      "studentName": "mohamed",
+      "studentEmail": "mn@gmail.com",
+      "studentPassword": "123456789",
+      "id": 9
+    },
+    {
+      "studentName": "mohamed",
+      "studentEmail": "eeee@dfdfd",
+      "studentPassword": "12345",
+      "id": 10
+    },
+    {
+      "studentName": "ali",
+      "studentEmail": "dfjj@gmainl.com",
+      "studentPassword": "12345",
+      "id": 11
+    },
+    {
+      "studentName": "ali",
+      "studentEmail": "2345678",
+      "studentPassword": "qwertyui",
+      "id": 12
     }
   ]
 }

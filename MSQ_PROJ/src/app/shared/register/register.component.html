@@ -1,22 +1,44 @@
 <div class="row align-items-center justify-content-md-center " style="height: 700px;">
     <div class="container" style="width: 700px; ">
-      <form>
+      <form [formGroup]="registForm" (submit)="registOperation($event)">
         <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Name</label>
-            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <label for="exampleInputEmail1"  class="form-label">Name</label>
+            <input type="text" class="form-control" formControlName="studentName" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <ng-container *ngIf="getStudentName.touched">
+            <div *ngIf="getStudentName.hasError('required')" class="form-text text-danger">
+              Student Name is required
+            </div>
+            <div *ngIf="getStudentName.hasError('minLength')" class="form-text text-danger">
+              The name must be more than 3 character
+            </div>
+            <div *ngIf="getStudentName.hasError('pattern')" class="form-text text-danger">
+              The name contain only characters
+            </div>
+            </ng-container>
+        </div>
+          <div class="mb-3">
+            <label for="exampleInputEmail1"  class="form-label">Email address</label>
+            <input type="email" class="form-control" formControlName="studentEmail" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <ng-container *ngIf="getStudentEmail.touched">
+              <div *ngIf="getStudentEmail.hasError('required')" class="form-text text-danger">
+                Email is required
+              </div>
+<!--               
+              <div *ngIf="getStudentEmail.hasError('pattern')" class="form-text text-danger">
+                Invalid email
+              </div> -->
+              </ng-container>
           </div>
           <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Email address</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <label for="exampleInputPassword1"  class="form-label">Password</label>
+            <input type="password" class="form-control" formControlName="studentPassword" id="exampleInputPassword1">
+            <ng-container *ngIf="getStudentPassword.touched">
+              <div *ngIf="getStudentPassword.hasError('required')" class="form-text text-danger">
+                Password is required
+              </div>
+              </ng-container>
           </div>
-          <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label">Password</label>
-            <input type="password" class="form-control" id="exampleInputPassword1">
-          </div>
-          <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label">Confirm Password</label>
-            <input type="password" class="form-control" id="exampleInputPassword1">
-          </div>
+          
           <button type="submit" class="btn btn-primary">Submit</button>
         </form>
     </div>   
