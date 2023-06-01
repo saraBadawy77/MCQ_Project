@@ -1,17 +1,18 @@
 <div class=" container">
   <div class="row align-items-center justify-content-md-center " style="height: 700px;">
+    <h1 class=".text-success text-center display-1"> Welcome to MSQ Exam</h1>
     <div class="card align-middle mx-4" style="width: 18rem; ">
       <img src="assets/images/teacher.png" >
       <div class="card-body align-items-center justify-content-md-center">
         <h5 class="card-title">Login As</h5>
-        <a href="#" class="btn btn-primary">Teacher</a>
+        <a [routerLink]="['/login']" class="btn btn-primary">Teacher</a>
       </div>
     </div>
     <div class="card align-middle mx-4" style="width: 18rem;">
       <img src="assets/images/student.png" >
       <div class="card-body align-items-center justify-content-md-center">
         <h5 class="card-title">Login As</h5>
-        <a href="#" class="btn btn-primary ">student</a>
+        <a [routerLink]="['/login']" class="btn btn-primary ">student</a>
       </div>
     </div>
   </div>

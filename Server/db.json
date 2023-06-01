@@ -97,6 +97,12 @@
       "email": "ahmed_c44@outlook.com",
       "password": "123456789",
       "id": 17
+    },
+    {
+      "studentName": "Ahmed",
+      "studentEmail": "ahmed_c44@outlook.com",
+      "studentPassword": "1235646453",
+      "id": 18
     }
   ],
   "logins": [

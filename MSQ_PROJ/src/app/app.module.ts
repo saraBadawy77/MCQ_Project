@@ -20,6 +20,7 @@ import { ToastNoAnimation, ToastNoAnimationModule } from 'ngx-toastr';
 import { CommonModule } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
+import { WelcomeComponent } from './Component/welcome/welcome.component';
 
 
 
@@ -30,7 +31,8 @@ import { ToastrModule } from 'ngx-toastr';
     RegisterComponent,
     WelcomePageComponent,
     MakeExamComponent,
-    LoginFormComponent
+    LoginFormComponent,
+    WelcomeComponent
   
   ],
   imports: [
