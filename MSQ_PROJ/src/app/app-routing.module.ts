@@ -10,9 +10,10 @@ import { CoursesComponent } from './strudent/courses/courses.component';
 
 
 const routes: Routes = [
-  {path:'login' , component:LoginFormComponent},
+  
   { path: '', component: WelcomePageComponent},
   { path: 'courses', component: CoursesComponent},
+  {path:'login' , component:LoginFormComponent},
   { path: 'register', component: RegisterComponent }
   
   

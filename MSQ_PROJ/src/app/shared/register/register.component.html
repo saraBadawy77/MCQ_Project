@@ -3,7 +3,7 @@
       <form [formGroup]="registForm" (submit)="registOperation($event)">
         <div class="mb-3">
             <label for="exampleInputEmail1"  class="form-label">Name</label>
-            <input type="text" class="form-control" formControlName="studentName" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <input type="text" class="form-control" formControlName="name" id="exampleInputEmail1" aria-describedby="emailHelp">
             <ng-container *ngIf="getStudentName.touched">
             <div *ngIf="getStudentName.hasError('required')" class="form-text text-danger">
               Student Name is required
@@ -18,20 +18,20 @@
         </div>
           <div class="mb-3">
             <label for="exampleInputEmail1"  class="form-label">Email address</label>
-            <input type="email" class="form-control" formControlName="studentEmail" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <input type="email" class="form-control" formControlName="email" id="exampleInputEmail1" aria-describedby="emailHelp">
             <ng-container *ngIf="getStudentEmail.touched">
               <div *ngIf="getStudentEmail.hasError('required')" class="form-text text-danger">
                 Email is required
               </div>
-<!--               
-              <div *ngIf="getStudentEmail.hasError('pattern')" class="form-text text-danger">
+              
+              <div *ngIf="getStudentEmail.hasError('email')" class="form-text text-danger">
                 Invalid email
-              </div> -->
+              </div>
               </ng-container>
           </div>
           <div class="mb-3">
             <label for="exampleInputPassword1"  class="form-label">Password</label>
-            <input type="password" class="form-control" formControlName="studentPassword" id="exampleInputPassword1">
+            <input type="password" class="form-control" formControlName="password" id="exampleInputPassword1">
             <ng-container *ngIf="getStudentPassword.touched">
               <div *ngIf="getStudentPassword.hasError('required')" class="form-text text-danger">
                 Password is required
