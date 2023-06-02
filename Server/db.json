@@ -44,65 +44,28 @@
       "password": "123456"
     },
     {
-      "email": "ahmed_c44@outlook.com",
-      "password": "fwefwefwe",
-      "id": 7
-    },
-    {
-      "email": "ahmed_c44@outlook.com",
-      "password": "fwefwefwe",
-      "id": 8
-    },
-    {
-      "email": "ahmed_c44@outlook.com",
-      "password": "m,mswssq",
-      "id": 9
-    },
-    {
-      "email": "ahmed_c44@outlook.com",
-      "password": "123456789",
-      "id": 10
-    },
-    {
-      "email": "ahmed_c44@outlook.com",
-      "password": "123456789",
-      "id": 11
-    },
-    {
-      "email": "ahmed_c44@outlook.com",
-      "password": "123456789",
-      "id": 12
-    },
-    {
-      "email": "ahmed_c44@outlook.com",
-      "password": "123456789",
-      "id": 13
-    },
-    {
-      "email": "ahmed_c44@outlook.com",
-      "password": "123456789",
-      "id": 14
-    },
-    {
-      "email": "ahmed_c44@outlook.com",
-      "password": "123456789",
-      "id": 15
-    },
-    {
-      "email": "ahmed_c44@outlook.com",
-      "password": "123456789",
-      "id": 16
-    },
-    {
-      "email": "ahmed_c44@outlook.com",
-      "password": "123456789",
-      "id": 17
-    },
-    {
       "studentName": "Ahmed",
       "studentEmail": "ahmed_c44@outlook.com",
       "studentPassword": "1235646453",
       "id": 18
+    },
+    {
+      "studentName": "Ahemed",
+      "studentEmail": "mn1111@gmail.com",
+      "studentPassword": "123456",
+      "id": 19
+    },
+    {
+      "studentName": "Nagy",
+      "studentEmail": "MN@gmail.com",
+      "studentPassword": "432456",
+      "id": 20
+    },
+    {
+      "name": "Waleed",
+      "email": "welo@gmail.com",
+      "password": "234567",
+      "id": 21
     }
   ],
   "logins": [
