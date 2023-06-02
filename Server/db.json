@@ -43,17 +43,18 @@
       "name": "Hana",
       "email": "Hana@msq.com",
       "password": "123456"
-        }
+    }
   ],
   "login": [
     {
-      "name": "Mr.Ahmed",
-      "role": "teacher",
+      "name": "Ahmed",
+      "role": "students",
       "userId": 1,
       "id": 1
     }
   ],
-  "Courses": [{
+  "Courses": [
+    {
       "id": 1,
       "name": "",
       "numberOfStudents": "",
