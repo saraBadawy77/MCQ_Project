@@ -6,6 +6,7 @@ import { AuthService } from './auth/sevices/auth.service';
 
 
 @Component({
+  user
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
@@ -20,6 +21,7 @@ getUserData(){
     this.service.getRole().subscribe(res=> {
       this.service.user.next(res)
     })}
+
 
 }
  
