@@ -47,9 +47,6 @@
   ],
   "login": [
     {
-      "name": "Ahmed",
-      "role": "students",
-      "userId": 1,
       "id": 1
     }
   ],
