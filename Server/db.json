@@ -42,107 +42,23 @@
       "name": "Hana",
       "email": "Hana@msq.com",
       "password": "123456"
-    },
-    {
-      "email": "ahmed_c44@outlook.com",
-      "password": "fwefwefwe",
-      "id": 7
-    },
-    {
-      "email": "ahmed_c44@outlook.com",
-      "password": "fwefwefwe",
-      "id": 8
-    },
-    {
-      "email": "ahmed_c44@outlook.com",
-      "password": "m,mswssq",
-      "id": 9
-    },
-    {
-      "email": "ahmed_c44@outlook.com",
-      "password": "123456789",
-      "id": 10
-    },
-    {
-      "email": "ahmed_c44@outlook.com",
-      "password": "123456789",
-      "id": 11
-    },
-    {
-      "email": "ahmed_c44@outlook.com",
-      "password": "123456789",
-      "id": 12
-    },
-    {
-      "email": "ahmed_c44@outlook.com",
-      "password": "123456789",
-      "id": 13
-    },
-    {
-      "email": "ahmed_c44@outlook.com",
-      "password": "123456789",
-      "id": 14
-    },
-    {
-      "email": "ahmed_c44@outlook.com",
-      "password": "123456789",
-      "id": 15
-    },
-    {
-      "email": "ahmed_c44@outlook.com",
-      "password": "123456789",
-      "id": 16
-    },
-    {
-      "email": "ahmed_c44@outlook.com",
-      "password": "123456789",
-      "id": 17
-    },
-    {
-      "studentName": "Ahmed",
-      "studentEmail": "ahmed_c44@outlook.com",
-      "studentPassword": "1235646453",
-      "id": 18
     }
   ],
-  "logins": [
+  "login": [
     {
-      "role": "teacher",
+      "username": "admin",
+      "role": "doctor",
       "userId": 1,
-      "studentName": "mohamed",
-      "studentEmail": "mohamed",
-      "studentPassword": "1234567",
-      "id": 7
-    },
+      "id": 1
+    }
+  ],
+  "Courses": [
     {
-      "studentName": "mohamed",
-      "studentEmail": "mohamed",
-      "studentPassword": "123456789",
-      "id": 8
-    },
-    {
-      "studentName": "mohamed",
-      "studentEmail": "mn@gmail.com",
-      "studentPassword": "123456789",
-      "id": 9
-    },
-    {
-      "studentName": "mohamed",
-      "studentEmail": "eeee@dfdfd",
-      "studentPassword": "12345",
-      "id": 10
-    },
-    {
-      "studentName": "ali",
-      "studentEmail": "dfjj@gmainl.com",
-      "studentPassword": "12345",
-      "id": 11
-    },
-    {
-      "studentName": "ali",
-      "studentEmail": "2345678",
-      "studentPassword": "qwertyui",
-      "id": 12
+      "id": 1,
+      "name": "",
+      "numberOfStudents": "",
+      "maXGrade": ""
+      
     }
   ]
 }

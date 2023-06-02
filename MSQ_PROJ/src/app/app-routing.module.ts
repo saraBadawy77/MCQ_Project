@@ -5,7 +5,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { RegisterComponent } from './shared/register/register.component';
 import { WelcomePageComponent } from './shared/welcome-page/welcome-page.component';
 import { WelcomeComponent } from './Component/welcome/welcome.component';
-
+ 
 
 
 const routes: Routes = [
