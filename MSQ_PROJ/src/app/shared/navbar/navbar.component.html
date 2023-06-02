@@ -1,12 +1,15 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">MSQ Exam</a>
+    <a class="navbar-brand" [routerLink]="['']">MSQ Exam</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item active">
-            <a class="nav-link"*ngIf="user?.role=='teacher'" [routerLink]="['newExam']">New Exam</a>
+          <a class="nav-link"*ngIf="user?.role=='teacher'" [routerLink]="['newExam']">New Exam</a>
+        </li>
+        <li class="nav-item active">
+            <a class="nav-link" [routerLink]="['aboutus']">About Us</a>
           </li>
         <li class="nav-item">
           <a class="nav-link"*ngIf="user!==null" href="#">Courses</a>
@@ -14,9 +17,13 @@
         <li class="nav-item">
           <a class="nav-link" *ngIf="user?.role=='teacher'" href="">Students</a>
         </li>
+        <li class="nav-item active">
+          <a class="nav-link" [routerLink]="['Contactus']">Contact Us</a>
+        </li>
       </ul>
       <ul class="navbar-nav align-items-end">
-        <a class="nav-link" *ngIf="user!==null" [routerLink]="['/login']" (click)="signout()">sign out</a>
+        <a class="nav-link" *ngIf="user!==null" [routerLink]="['']" (click)="signout()">sign out</a>
+        <a class="nav-link" *ngIf="user==null" [routerLink]="['login']" (click)="signout()">Log in</a>
         <li class="nav-item">
           </li>
         <li class="nav-item">
