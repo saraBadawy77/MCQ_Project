@@ -1,5 +1,20 @@
 .contact-info-left{
     background-color: #629f8166;
-    padding: 1rem;
-    line-height: 1.5;
+    padding: 2rem;
+    line-height: 2;
+}
+.contact-form-right{
+    line-height: 2;
+}
+.contact-us{
+    margin-top: 50px;
+}
+.contact-page
+{
+    background: url(https://img.freepik.com/free-photo/top-view-blue-monday-concept-composition-with-telephone_23-2149139104.jpg?w=1060&t=st=1685720055~exp=1685720655~hmac=ac7717f1a9342b63cce9205532de51ce9df3c3040694367e376ddae290cd5115) no-repeat fixed center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  margin-top: 70px;
 }

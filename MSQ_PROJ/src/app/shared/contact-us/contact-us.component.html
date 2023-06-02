@@ -1,7 +1,7 @@
 
-    <div class="container mt-5 px-5 align-items-center justify-content-center" style="height: 46rem;">
-        <div class="row ">
-            <div class="col-lg-4 col-sm-12">
+    <div class=" container-fluid col-9 mt-5 pt-5 align-items-center justify-content-center contact-page" style="height: 42rem;">
+        <div class="row contact-us">
+            <div class="col-lg-5 col-sm-12">
                 <div class="contact-info-left">
                     <h2>CONTACT INFO</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent urna diam, maximus ut ullamcorper quis, placerat id eros. Duis semper justo sed condimentum rutrum. Nunc tristique purus turpis. Maecenas vulputate. </p>
@@ -13,7 +13,7 @@
                             <p><i class="fas fa-phone-square"></i>Phone: <a href="tel:+1-888705770">+1-888 705 770</a></p>
                         </li>
                         <li>
-                            <p><i class="fas fa-envelope"></i>Email: <a href="mailto:contactinfo@gmail.com">contactinfo@gmail.com</a></p>
+                            <p><i class="fas fa-envelope "></i>Email: <a href="mailto:contactinfo@gmail.com">contactinfo@gmail.com</a></p>
                         </li>
                     </ul>
                 </div>
@@ -22,29 +22,51 @@
                 <div class="contact-form-right">
                     <h2>GET IN TOUCH</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed odio justo, ultrices ac nisl sed, lobortis porta elit. Fusce in metus ac ex venenatis ultricies at cursus mauris.</p>
-                    <form >
+                    <form [formGroup]="contactForm">
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="form-group">
-                                    <input type="text" class="form-control my-3" id="name" name="name" placeholder="Your Name" required data-error="Please enter your name">
-                                
+                                    <input type="text" class="form-control my-3" formControlName="name" id="name" name="name" placeholder="Your Name" required data-error="Please enter your name">
+                                    <ng-container *ngIf="sname.touched">
+                                        <div *ngIf="sname.hasError('required')" class="form-text text-danger">
+                                           Name is required
+                                        </div>
+                                        
+                                        <div *ngIf="sname.hasError('pattern')" class="form-text text-danger">
+                                          Name is not valid
+                                        </div>
+                                        </ng-container>
                                 </div>
+                                
                             </div>
                             <div class="col-md-12">
                                 <div class="form-group">
-                                    <input type="text" placeholder="Your Email" id="email" class="form-control my-3" name="name" required data-error="Please enter your email">
+                                    <input type="text" placeholder="Your Email" id="email" formControlName="email" class="form-control my-3" name="name" required data-error="Please enter your email">
+                                    <ng-container *ngIf="email.touched">
+                                        <div *ngIf="email.hasError('required')" class="form-text text-danger">
+                                           Email is required
+                                        </div>
+                                        
+                                        <div *ngIf="email.hasError('pattern')" class="form-text text-danger">
+                                          Email is not valid
+                                        </div>
+                                        </ng-container>
                                 </div>
+                            
                             </div>
                         
                             <div class="col-md-12">
                                 <div class="form-group">
-                                    <textarea class="form-control my-3" id="message" placeholder="Your Message" rows="4" data-error="Write your message" required></textarea>
-                                    <div class="help-block with-errors"></div>
+                                    <textarea class="form-control my-3" id="message" formControlName="message" placeholder="Your Message" rows="4" data-error="Write your message" required></textarea>
+                                    <ng-container *ngIf="message.touched">
+                                        <div *ngIf="message.hasError('required')" class="form-text text-danger">
+                                           Email is required
+                                        </div>
+                                
+                                    </ng-container>
                                 </div>
                                 <div class="submit-button text-center">
-                                    <button class="btn hvr-hover" id="submit" type="submit">Send Message</button>
-                                    <div id="msgSubmit" class="h3 text-center hidden"></div>
-                                    <div class="clearfix"></div>
+                                    <button class="btn btn-outline-info" id="submit" type="submit">Send Message</button>
                                 </div>
                             </div>
                         </div>
