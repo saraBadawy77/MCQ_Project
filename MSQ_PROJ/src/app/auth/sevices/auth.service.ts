@@ -4,11 +4,10 @@ import { Injectable } from '@angular/core';
 @Injectable({
   providedIn: 'root'
 })
-export class AuthService {
+export class AuthService 
+{
 
   constructor( private http:HttpClient) { }
-
-   
   createUser(model:any){
     return this.http.post(" http://localhost:3000/Students",model)
   }
@@ -17,6 +16,8 @@ export class AuthService {
   }
   login(model:any){
     return this.http.put(" http://localhost:3000/logins/1",model)
-    }
-
+  }
+  getRole(){
+    return this.http.get(" http://localhost:3000/logins/1")
+  }
 }

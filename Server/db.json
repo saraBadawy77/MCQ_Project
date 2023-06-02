@@ -54,18 +54,6 @@
       "studentEmail": "mn1111@gmail.com",
       "studentPassword": "123456",
       "id": 19
-    },
-    {
-      "studentName": "Nagy",
-      "studentEmail": "MN@gmail.com",
-      "studentPassword": "432456",
-      "id": 20
-    },
-    {
-      "name": "Waleed",
-      "email": "welo@gmail.com",
-      "password": "234567",
-      "id": 21
     }
   ],
   "logins": [
