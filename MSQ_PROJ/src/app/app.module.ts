@@ -21,6 +21,7 @@ import { CommonModule } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 import { WelcomeComponent } from './Component/welcome/welcome.component';
+import { CoursesComponent } from './strudent/courses/courses.component';
 
 
 
@@ -32,7 +33,8 @@ import { WelcomeComponent } from './Component/welcome/welcome.component';
     WelcomePageComponent,
     MakeExamComponent,
     LoginFormComponent,
-    WelcomeComponent
+    WelcomeComponent,
+    CoursesComponent
   
   ],
   imports: [

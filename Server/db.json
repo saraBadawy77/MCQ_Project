@@ -1,6 +1,7 @@
 {
   "teacher": [
     {
+      "name": "Mr.Ahmed",
       "id": 1,
       "email": "admin@msq.com",
       "password": "123456"
@@ -46,8 +47,8 @@
   ],
   "login": [
     {
-      "username": "admin",
-      "role": "doctor",
+      "name": "Mr.Ahmed",
+      "role": "teacher",
       "userId": 1,
       "id": 1
     }
@@ -58,7 +59,6 @@
       "name": "",
       "numberOfStudents": "",
       "maXGrade": ""
-      
     }
   ]
 }
