@@ -48,12 +48,12 @@ submit()
   else
   {
     const model = {
-      username:this.users[index].username,
+      name:this.users[index].name,
       role:this.type,
       userId:this.users[index].id
     }
     this.service.login(model).subscribe(res => {
-      console.log(res)
+      this.service.user.next(res)
       this.toaster.success("Login Successfully" , "" , {
         disableTimeOut: false,
         titleClass: "toastr_title",
@@ -61,7 +61,7 @@ submit()
         timeOut:5000,
         closeButton: true,
       })
-      this.router.navigate(['/Home'])
+      this.router.navigate(['/courses'])
     })
   }
 }

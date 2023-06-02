@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from 'src/app/auth/sevices/auth.service';
 
 @Component({
   selector: 'app-navbar',
@@ -8,10 +9,22 @@ import { Component, OnInit } from '@angular/core';
 export class NavbarComponent implements OnInit {
   name = 'Angular';
   public isCollapsed = true;
-  user= null
-
-  constructor( ){}
+  user:any = null;
+  constructor( private service:AuthService){}
+  
+  
   ngOnInit(): void {
-    throw new Error('Method not implemented.');
+    this .service.user.subscribe((res:any)=>{
+      if(res.role){
+        this.user = res;
+      }
+    })
   }
+  signout(){
+    const model = {}
+    this.service.login(model).subscribe(res=>{
+      this.user=null
+      this.service.user.next(res)
+    })}
+
 }
