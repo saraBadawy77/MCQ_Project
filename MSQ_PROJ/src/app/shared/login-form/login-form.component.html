@@ -1,24 +1,24 @@
-<div class="row align-items-center justify-content-md-center bg-secondary" style="height: 700px;">
+<div id="login-page" class="container-fluid row align-items-center justify-content-md-center bg-secondary" style="height: 700px;">
     <div class="container" style="width: 700px; ">
-      <form>
+      <form [formGroup]="myForm">
         <div class="col-sm-12 mb-3 text-dark">        
-            <mat-radio-group class="bg-secondry"> 
+            <mat-radio-group class="bg-secondry "formControlName="type"  (change)="getRole($event)"> 
                 <mat-radio-button value="students"  class="w-25 text-dark" color="primary">Student</mat-radio-button>
-                <mat-radio-button value="doctor" class="w-25    text-dark" color="primary">Teacher</mat-radio-button>
+                <mat-radio-button value="teacher" class="w-25    text-dark" color="primary">Teacher</mat-radio-button>
             </mat-radio-group>
         </div>
-          <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Email address</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+          <div class="mb-3"> 
+            <label for="exampleInputEmail1" class="form-label" >Email address</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" formControlName="email">
           </div>
           <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label">Password</label>
-            <input type="password" class="form-control" id="exampleInputPassword1">
+            <label for="exampleInputPassword1" class="form-label" >Password</label>
+            <input type="password" class="form-control" id="exampleInputPassword1" formControlName="password">
           </div>
           <div class="mb-3 form-check">
-            <a href=""> Register</a>
+            <a  [routerLink]="['/register']"> Register</a>
           </div>
-          <button type="submit" class="btn btn-primary">Login</button>
+          <button type="submit" class="btn btn-primary" [disabled]="!myForm.valid" (click)="submit()"> Login</button>
         </form>
     </div>   
   </div>

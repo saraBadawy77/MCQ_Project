@@ -1,17 +1,27 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { bootstrapApplication } from '@angular/platform-browser';
+import { provideAnimations } from '@angular/platform-browser/animations';
+import { provideToastr } from 'ngx-toastr';
+import { AuthService } from './auth/sevices/auth.service';
+
 
 @Component({
+
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
-  title = 'MSQ_PROJ';
+export class AppComponent implements OnInit {
+  title = 'MSQ Exam ';
+  constructor(private service:AuthService){  }
+ngOnInit(): void {
+  this.getUserData();
 }
-  // registForm =new FormGroup({
-  //   studentName:new FormControl("",[Validators.required,Validators.pattern('^[a-zA-Z]+$'),Validators.minLength(20)]),
-  //   studentEmail:new FormControl("",Validators.required),
-  //   studentPassword : new FormControl("",[Validators.required,Validators.minLength(5)]),
+getUserData(){
+    this.service.getRole().subscribe(res=> {
+      this.service.user.next(res)
+    })}
 
 
-  // })
+}
+ 
