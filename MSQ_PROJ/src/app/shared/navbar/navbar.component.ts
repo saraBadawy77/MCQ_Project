@@ -12,7 +12,7 @@ export class NavbarComponent implements OnInit {
   name = 'Angular';
   public isCollapsed = true;
   user:any = null;
-  constructor( private service:AuthService,private toastr: ToastrService){}
+  constructor( private service:AuthService){}
   
   
   ngOnInit(): void {
