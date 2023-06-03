@@ -12,7 +12,7 @@
             <a class="nav-link" [routerLink]="['aboutus']">About Us</a>
           </li>
         <li class="nav-item">
-          <a class="nav-link"*ngIf="user!==null" href="#">Courses</a>
+          <a class="nav-link"*ngIf="user!==null" [routerLink]="['courses']" >Courses</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" *ngIf="user?.role=='teacher'" href="">Students</a>
