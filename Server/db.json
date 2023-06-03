@@ -56,6 +56,35 @@
       "name": "",
       "numberOfStudents": "",
       "maXGrade": ""
+    },
+    {
+      "coursename": "css",
+      "questions": [],
+      "id": 2
+    },
+    {
+      "coursename": "html",
+      "questions": [
+        {
+          "question": "yt",
+          "answer1": "j",
+          "answer2": "gg",
+          "correctanswer": "j"
+        }
+      ],
+      "id": 3
+    },
+    {
+      "coursename": "java script",
+      "questions": [
+        {
+          "question": "er",
+          "answer1": "kj",
+          "answer2": "mh",
+          "correctanswer": "mh"
+        }
+      ],
+      "id": 4
     }
   ]
 }

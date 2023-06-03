@@ -5,7 +5,6 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { RegisterComponent } from './shared/register/register.component';
 import { WelcomePageComponent } from './shared/welcome-page/welcome-page.component';
-import { MakeExamComponent } from './Teacher/Componants/Create/make-exam/make-exam.component';
 import {MatButtonModule} from '@angular/material/button';
 import {MatTabsModule} from '@angular/material/tabs';
 import {FormControl, Validators, FormsModule, ReactiveFormsModule} from '@angular/forms';
@@ -24,6 +23,8 @@ import { WelcomeComponent } from './Component/welcome/welcome.component';
 import { CoursesComponent } from './strudent/courses/courses.component';
 import { ContactUSComponent } from './shared/contact-us/contact-us.component';
 import { AboutUSComponent } from './shared/about-us/about-us.component';
+import { NewexamComponent } from './Teacher/Componants/newexam/newexam/newexam.component';
+import { SubjectComponent } from './Teacher/Componants/subject/subject/subject.component';
 
 
 
@@ -33,17 +34,19 @@ import { AboutUSComponent } from './shared/about-us/about-us.component';
     NavbarComponent,
     RegisterComponent,
     WelcomePageComponent,
-    MakeExamComponent,
     LoginFormComponent,
     WelcomeComponent,
     CoursesComponent,
     ContactUSComponent,
-    AboutUSComponent
+    AboutUSComponent,
+    NewexamComponent,
+    SubjectComponent
   
   ],
   imports: [
     CommonModule,
     BrowserAnimationsModule,
+    ToastrModule.forRoot(),
     ToastNoAnimationModule.forRoot(),
     BrowserModule,
     AppRoutingModule,

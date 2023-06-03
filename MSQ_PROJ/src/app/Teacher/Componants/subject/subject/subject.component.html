@@ -1,0 +1,17 @@
+<div class="container">
+    <div class="row">
+      <div class="col-sm-12 col-md-6 col-lg-4" *ngFor="let x of subjects;let index=index">
+        <div class="card my-3">
+          <div class="card-body d-flex flex-column justify-content-center">
+            <h1 class="m-auto text-center">{{ x.coursename }}</h1>
+            <div class="mt-auto">
+              <button class="btn btn-danger">Delete</button>
+              <button class="btn btn-primary">Display</button>
+              <button class="btn btn-success">Start Test</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

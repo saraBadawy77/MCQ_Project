@@ -1,0 +1,82 @@
+<mat-tab-group class="p-5">
+    <mat-tab label="Create a new question">
+       
+      <div class="input-group m-auto  p-5 w-50">
+        <button class="btn btn-outline-secondary" type="button" id="button-addon1" (click)="go()">Complete</button>
+        <input type="text" class="form-control" placeholder=" Entrt Course Name" aria-label="Example text with button addon" aria-describedby="button-addon1" [formControl]="coursename">
+      </div>
+       
+    
+      </mat-tab>
+      <mat-tab label="{{coursename.value}} course"  disabled="{{gonext}}"> 
+        <div class=" m-auto  p-5 w-100">
+          <form [formGroup]="questionsform">
+            <div class="form-group m-5">
+              <label for="question"> <h3>Question:</h3> </label>
+              <input type="text" class="form-control" id="question" placeholder="Enter the question" formControlName="question">
+            </div>
+            <div class="row m-5">
+              <div class="col">
+                <div class="form-check">
+                  <input class="form-check-input" type="radio"  (change)="getcorrect($event)" name="flexRadioDefault" id="flexRadioDefault1" value="answer1" >
+                  <label class="form-check-label" for="flexRadioDefault1">
+                   <h3> A</h3> 
+                  </label>
+    
+                  <input type="text" class="form-control" formControlName="answer1" value="answer1">
+                  
+                </div>
+              </div>
+              <div class="col">
+                <div class="form-check">
+                  <input class="form-check-input" type="radio"     (change)="getcorrect($event)"  name="flexRadioDefault" id="flexRadioDefault2" value="answer2"  >
+                  <label class="form-check-label" for="flexRadioDefault2">
+                    <h3> B</h3> 
+                  </label>
+    
+                  <input type="text" class="form-control" formControlName="answer2" value="answer2" >
+                </div>
+              </div>
+            </div>
+            
+            <div class="">
+              <button type="button" class="btn btn-primary " style="margin-right: 30px;" [disabled]="questionsform.invalid" (click)="create()">Save</button>
+    
+              <button type="button" class="btn btn-danger" style="margin-right: 30px;" (click)="Cancel()">Cancel</button>
+              <button type="button" class="btn  btn-warning "style="margin-right: 30px;" (click)="resetform()">Reset</button>
+              <button type="button" class="btn btn-success" (click)="submit()" [disabled]="questions.length ? false : true">
+                {{ gonext2 ? 'Done' : 'Show' }}
+              </button>
+              
+            </div>
+            
+          </form>
+          </div>
+      </mat-tab>
+      <mat-tab label="View Questions" disabled="{{gonext2}}">
+        <div class="mt-5">
+          <div class="">
+            <div class="col-sm-12 text-center">
+              <h1 class="card-title text-danger mb-3"> Course:{{coursename.value}}  </h1>
+            </div>
+          </div>
+          <div class="d-flex justify-content-between">
+            <div class="col-sm-12 col-md-5" *ngFor="let x of questions; let index=index;">
+              <div class="card shadow p-3 mb-5 bg-white rounded">
+                <div class="card-body">
+                  <p class=" text-center text-danger mb-3"> {{x.question}}</p>
+                  <p class="card-text">A:{{x.answer1}} </p>
+                  <p class="card-text">B:{{x.answer2}} </p>
+                  <p class="card-text text-success">Correct Result: {{x.correctanswer}} </p>
+                  <button class="btn btn-danger" (click)="deletesubject(index)">Delete Test</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        
+         
+      
+      </mat-tab>
+    </mat-tab-group>
