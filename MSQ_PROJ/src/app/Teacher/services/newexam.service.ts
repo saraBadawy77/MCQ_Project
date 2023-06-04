@@ -22,6 +22,9 @@ export class NewexamService {
     return this.http.get(this.NEWURL);
   }
 
-
+  deleteco(id: number) {
+    return this.http.delete(`${this.NEWURL}/${id}`);
+  }
+  
 
 }

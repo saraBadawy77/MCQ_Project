@@ -12,7 +12,7 @@
             <a class="nav-link" [routerLink]="['aboutus']">About Us</a>
           </li>
         <li class="nav-item">
-          <a class="nav-link"*ngIf="user!==null" href="#">Courses</a>
+          <a class="nav-link"*ngIf="user!==null" [routerLink]="['courses']" >Courses</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" *ngIf="user?.role=='teacher'" href="">Students</a>
@@ -23,6 +23,7 @@
       </ul>
       <ul class="navbar-nav align-items-end">
         <a class="nav-link" *ngIf="user!==null" [routerLink]="['']" (click)="signout()">sign out</a>
+        <!--sign out??? -->
         <a class="nav-link" *ngIf="user==null" [routerLink]="['login']" (click)="signout()">Log in</a>
         <li class="nav-item">
           </li>

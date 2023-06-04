@@ -1,4 +1,4 @@
-<div id="registration-page" class="container-fluid row align-items-center justify-content-md-center"  style="height:46rem;">
+<div id="registration-page" class="container-fluid row align-items-center justify-content-md-center"  style="height:47rem;">
     <div class="col-4">
       <form [formGroup]="registForm" (submit)="registOperation($event)">
         <div class="mb-3">
@@ -24,7 +24,7 @@
                 Email is required
               </div>
               
-              <div *ngIf="getStudentEmail.hasError('email')" class="form-text text-danger">
+              <div *ngIf="getStudentEmail.hasError('pattern')" class="form-text text-danger">
                 Invalid email
               </div>
               </ng-container>

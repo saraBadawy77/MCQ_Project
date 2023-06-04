@@ -1,6 +1,6 @@
-<div id="login-page" class="container-fluid row align-items-center justify-content-md-center bg-secondary" style="height: 700px;">
-    <div class="container" style="width: 700px; ">
-      <form [formGroup]="myForm">
+<div id="login-page" class="container-fluid row align-items-center justify-content-md-center bg-secondary" style="height: 755px;">
+    <div class="container" class="col-4 ">
+      <form [formGroup]="myForm" >
         <div class="col-sm-12 mb-3 text-dark">        
             <mat-radio-group class="bg-secondry "formControlName="type"  (change)="getRole($event)"> 
                 <mat-radio-button value="students"  class="w-25 text-dark" color="primary">Student</mat-radio-button>
