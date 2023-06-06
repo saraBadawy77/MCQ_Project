@@ -53,9 +53,12 @@
   ],
   "login": [
     {
+<<<<<<< Updated upstream
       "name": "Mr.Ahmed",
       "role": "teacher",
       "userId": 1,
+=======
+>>>>>>> Stashed changes
       "id": 1
     }
   ],
