@@ -53,33 +53,13 @@
   ],
   "login": [
     {
-<<<<<<< Updated upstream
-      "name": "Mr.Ahmed",
-      "role": "teacher",
+      "name": "Ahmed",
+      "role": "students",
       "userId": 1,
-=======
->>>>>>> Stashed changes
       "id": 1
     }
   ],
   "Courses": [
-    {
-      "coursename": "css",
-      "questions": [],
-      "id": 2
-    },
-    {
-      "coursename": "html",
-      "questions": [
-        {
-          "question": "yt",
-          "answer1": "j",
-          "answer2": "gg",
-          "correctanswer": "j"
-        }
-      ],
-      "id": 3
-    },
     {
       "coursename": "java script",
       "questions": [
@@ -91,6 +71,42 @@
         }
       ],
       "id": 4
+    },
+    {
+      "coursename": "MVC",
+      "questions": [
+        {
+          "question": "1+1",
+          "answer1": "2",
+          "answer2": "3",
+          "correctanswer": "2"
+        }
+      ],
+      "id": 5
+    },
+    {
+      "coursename": "Maths",
+      "questions": [
+        {
+          "question": "5+6",
+          "answer1": "100",
+          "answer2": "11",
+          "correctanswer": "11"
+        },
+        {
+          "question": "84*87",
+          "answer1": "6785",
+          "answer2": "7958",
+          "correctanswer": "7958"
+        },
+        {
+          "question": "5+6",
+          "answer1": "785",
+          "answer2": "9898",
+          "correctanswer": "785"
+        }
+      ],
+      "id": 6
     }
   ]
 }

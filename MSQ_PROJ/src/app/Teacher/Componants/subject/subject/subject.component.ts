@@ -12,41 +12,28 @@ import { AuthService } from 'src/app/auth/sevices/auth.service';
 })
 export class SubjectComponent implements OnInit {
   user:any={}; 
-
   subjects:any[]=[];
-constructor( private services:NewexamService,
-  private auth:AuthService,
-  private toastr:ToastrService
-  ){}
-  ngOnInit(): void {
-   this.allsubject();
+  constructor( private services:NewexamService,private auth:AuthService,private toastr:ToastrService){}
+
+  ngOnInit(): void {  
+   this.allsubject(); 
    this.getuserinfo();
   }
-
-
   allsubject(){
-this.services.getallsubject().subscribe((res:any)=>{
-  this.subjects=res
+  this.services.getallsubject().subscribe((res:any)=>{
+    this.subjects=res
 
-})}
-
-
-getuserinfo(){
-  this.auth.getRole().subscribe(res=>{
-    this.user=res;
+  })}
+  getuserinfo(){
+    this.auth.getRole().subscribe(res=>{
+      this.user=res; 
   })
-}
-
-deleteCourse(index:number) {
+  }
+  deleteCourse(index:number) {
   let id = this.subjects[index].id;
   this.subjects.splice(index, 1);
-
   this.services.deleteco(id).subscribe(res => {
-    this.toastr.success("Course has been successfully deleted");
-  });
-}
-
-
-
+  this.toastr.success("Course has been successfully deleted");});
   }
+}
 

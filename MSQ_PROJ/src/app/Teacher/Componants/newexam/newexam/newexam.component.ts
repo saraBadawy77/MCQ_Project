@@ -31,13 +31,7 @@ export class NewexamComponent  implements OnInit{
     
    ngOnInit(): void {
    this.createform();
-  
-  
-    
   }
-   
-  
-  
   createform(){
     this.questionsform = this.fd.group({
       question:['',[Validators.required]],
@@ -45,7 +39,6 @@ export class NewexamComponent  implements OnInit{
       answer2:['',[Validators.required]]
     })
   }
-  
   create(){
     if( this.correctNum){
     const model={
@@ -56,22 +49,13 @@ export class NewexamComponent  implements OnInit{
     }
     this.questions.push(model)
    this.questionsform.reset();
-   
-  
-  
     }else{
       this.toastr.error("Choose the correct answer")
-    }
-  
-    
+    }  
   }
-  
-  
   getcorrect(event:any) {
     this.correctNum = event.target.value
-    
   }
-  
   resetform(){
     this.questionsform.reset();
   }
@@ -82,29 +66,20 @@ export class NewexamComponent  implements OnInit{
     this.coursename.reset();
     this.gonext=true;
   }
-  
-  
-  
-  
   @ViewChild(MatTabGroup) tabGroup!: MatTabGroup;
   go(){
   if(this.coursename.value==""){
     this.toastr.error(" Enter Cours Name")
-  }else{
-    
+  }else{ 
     this.gonext=false;
     this.tabGroup.selectedIndex = 1; 
-   
-   
   }
   }
-  
   submit() {
     const model = {
       coursename: this.coursename.value,
-      questions: this.questions
+      questions : this.questions
     };
-  
     if(this.gonext2){
   this.newservices.newexam(model).subscribe((res:any) =>{
     console.log(res);
@@ -113,23 +88,16 @@ export class NewexamComponent  implements OnInit{
   })
     }else{
       this.tabGroup.selectedIndex = 2; 
-    }
-  
-  
+    }  
   }
-  
   deletesubject(index:number){
   this.questions.splice(index,1);
   const model = {
     coursename: this.coursename.value,
     questions: this.questions
   };
-  
   this.newservices.update(model,this.id).subscribe(res=>{
     this.toastr.success(" The Course has been successfully deleted")
   })
   }
-  
-  
-  
 }

@@ -15,11 +15,13 @@ export class NewexamService {
   }
   update( model:any, id:number){
     return this.http.put(`${this.NEWURL}/${id}`,model);
-  
   }
 
   getallsubject(){
     return this.http.get(this.NEWURL);
+  }
+  getsubjectById(id:number){
+    return this.http.get(this.NEWURL+"/"+id);
   }
 
   deleteco(id: number) {

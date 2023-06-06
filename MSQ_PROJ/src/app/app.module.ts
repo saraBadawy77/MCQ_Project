@@ -24,6 +24,7 @@ import { ContactUSComponent } from './shared/contact-us/contact-us.component';
 import { AboutUSComponent } from './shared/about-us/about-us.component';
 import { NewexamComponent } from './Teacher/Componants/newexam/newexam/newexam.component';
 import { SubjectComponent } from './Teacher/Componants/subject/subject/subject.component';
+import { ExamComponent } from './strudent/component/exam/exam.component';
 
 
 
@@ -38,7 +39,8 @@ import { SubjectComponent } from './Teacher/Componants/subject/subject/subject.c
     ContactUSComponent,
     AboutUSComponent,
     NewexamComponent,
-    SubjectComponent
+    SubjectComponent,
+    ExamComponent
   
   ],
   imports: [

@@ -1,0 +1,26 @@
+<div class="examBox bg-light">
+    <div class="examhead text-center"><h2>Exam of {{subject?.coursename}}</h2></div>
+    <div class="quizBox"  *ngFor="let item of subject.questions; let index =index ">
+        <strong ><span class="text-primary">Qusetion ({{index+1}})</span>:  {{item.question}} </strong>
+        <div class="row mt-3" >
+            <div class="col-md-6 col-sm-12">
+                <mat-radio-button *ngIf="user?.role == 'students' && !showResult && validExam" (change)="getAnswer($event)"  color="warn"></mat-radio-button>
+                <label>A. {{item.answer1}} </label>
+            </div>
+
+            <div class="col-md-6 col-sm-12">
+                <mat-radio-button *ngIf="user?.role == 'students' && !showResult && validExam"  (change)="getAnswer($event)"   color="warn"></mat-radio-button>
+                <label>B. {{item.answer2}}</label>
+            </div>
+        </div>
+        <div class="text-end"   *ngIf="user?.role=='teacher'">
+            <button mat-raised-button  class="btn btn-danger" (click)="deleteQuestion(index)">Delete</button>
+        </div> 
+        <hr>
+    </div>
+    <div class="text-center" *ngIf="user?.role == 'students'">
+        <span *ngIf="showResult || !validExam" class="fs-4 text-success">  {{subject?.questions.length}} / {{total}}</span>
+        <button *ngIf="!showResult && validExam" class="btn btn-primary px-5 fs-5" (click)="getResult()">Result</button>
+    </div>
+
+</div>
