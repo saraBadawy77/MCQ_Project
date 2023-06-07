@@ -13,6 +13,7 @@ export class ExamComponent implements OnInit {
   id:any;
   subject :any;
   user:any;
+  studentAnswer:any;
   studentInfo:any
   total:number = 0;
   showResult:boolean = false;
@@ -50,7 +51,7 @@ export class ExamComponent implements OnInit {
     let value = event.value,
         questionIndex = event.source.name;
         this.subject.questions[questionIndex].studentAnswer = value
-    console.log(this.subject.questions)
+        console.log( this.subject.questions[questionIndex].studentAnswer)
   }
   checkValidExam() {
     for(let x in this.usersubjects) { 
@@ -64,9 +65,11 @@ export class ExamComponent implements OnInit {
   getResult() {
     this.total = 0
     for(let x in this.subject.questions) {
-      if(this.subject.questions[x].studentAnswer == this.subject.questions[x].correctAnswer) {
+      if(this.subject.questions[x].studentAnswer== this.subject.questions[x].correctAnswer) {
         this.total++
+        console.log(this.subject.questions[x].studentAnswer)
       }
+
     }
     this.showResult = true
     this.usersubjects.push({
