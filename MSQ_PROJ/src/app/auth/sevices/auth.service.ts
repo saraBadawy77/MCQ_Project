@@ -27,4 +27,10 @@ export class AuthService
   updateStudent(id:number , model:any) {
     return this.http.put("http://localhost:3000/"+"students/"+id , model)
   }
+
+  deleteStudent(studentId: number) {
+    return this.http.delete(`http://localhost:3000/students/${studentId}`);
+  }
+  
+
 }

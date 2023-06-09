@@ -29,4 +29,10 @@ export class NewexamService {
   }
   
 
+  deleteSubject(studentId: number) {
+    return this.http.delete(`${this.NEWURL}/${studentId}`);
+  }
+  
+  
+
 }

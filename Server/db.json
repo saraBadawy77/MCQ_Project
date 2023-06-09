@@ -9,52 +9,69 @@
   ],
   "Students": [
     {
-      "id": 1,
-      "name": "Ahmed",
-      "email": "Ahmed@msq.com",
-      "password": "123456"
-    },
-    {
-      "id": 2,
-      "name": "Ali",
-      "email": "Ali@msq.com",
-      "password": "123456"
-    },
-    {
-      "id": 3,
-      "name": "mona",
-      "email": "mona@msq.com",
-      "password": "123456"
-    },
-    {
-      "id": 4,
       "name": "Soha",
       "email": "Soha@msq.com",
-      "password": "123456"
+      "password": "123456",
+      "subjects": [
+        {
+          "name": "math",
+          "id": "6",
+          "degree": 2
+        },
+        {
+          "name": "MVC",
+          "id": "5",
+          "degree": 0
+        },
+        {
+          "name": "java script",
+          "id": "4",
+          "degree": 0
+        }
+      ],
+      "id": 4
     },
     {
-      "id": 5,
-      "name": "Ola",
-      "email": "Ola@msq.com",
-      "password": "123456"
-    },
-    {
-      "id": 6,
       "name": "Hana",
       "email": "Hana@msq.com",
-      "password": "123456"
+      "password": "123456",
+      "subjects": [
+        {
+          "name": "math",
+          "id": "6",
+          "degree": 1
+        }
+      ],
+      "id": 6
     },
     {
       "name": "sara",
       "email": "sara@sara.com",
       "password": "123456789",
+      "subjects": [
+        {
+          "name": "math",
+          "id": "6",
+          "degree": 2
+        },
+        {
+          "name": "MVC",
+          "id": "5",
+          "degree": 1
+        },
+        {
+          "name": "java script",
+          "id": "4",
+          "degree": 1
+        }
+      ],
       "id": 7
     }
   ],
   "login": [
     {
-      "name": "Ahmed",
-      "role": "students",
+      "name": "Mr.Ahmed",
+      "role": "teacher",
       "userId": 1,
       "id": 1
     }
@@ -83,30 +100,6 @@
         }
       ],
       "id": 5
-    },
-    {
-      "coursename": "Maths",
-      "questions": [
-        {
-          "question": "5+6",
-          "answer1": "100",
-          "answer2": "11",
-          "correctanswer": "11"
-        },
-        {
-          "question": "84*87",
-          "answer1": "6785",
-          "answer2": "7958",
-          "correctanswer": "7958"
-        },
-        {
-          "question": "5+6",
-          "answer1": "785",
-          "answer2": "9898",
-          "correctanswer": "785"
-        }
-      ],
-      "id": 6
     }
   ]
 }

@@ -10,6 +10,7 @@ import { AboutUSComponent } from './shared/about-us/about-us.component';
 import { NewexamComponent } from './Teacher/Componants/newexam/newexam/newexam.component';
 import { SubjectComponent } from './Teacher/Componants/subject/subject/subject.component';
 import { ExamComponent } from './strudent/component/exam/exam.component';
+import { AllstudentsComponent } from './Teacher/Componants/allstudents/allstudents.component';
  
 
 
@@ -22,7 +23,8 @@ const routes: Routes = [
   {path:'Contactus' , component:ContactUSComponent}, 
   {path:'aboutus' , component:AboutUSComponent}, 
   {path:'exam/:id' , component:ExamComponent}, 
-  { path: 'register', component: RegisterComponent }
+  { path: 'register', component: RegisterComponent },
+{path:'students', component:AllstudentsComponent }
   
 ];
 

@@ -19,7 +19,10 @@ export class ExamComponent implements OnInit {
   showResult:boolean = false;
   usersubjects:any[] = [];
   validExam:boolean = true;
-  constructor(private route:ActivatedRoute , private service:NewexamService  ,private auth :AuthService, private toaster:ToastrService) {
+  constructor(private route:ActivatedRoute , 
+    private service:NewexamService  ,
+    private auth :AuthService,
+     private toaster:ToastrService) {
     this.id = this.route.snapshot.paramMap.get('id')
     this.getSubject()
     this.getLogedInUser()
@@ -51,7 +54,7 @@ export class ExamComponent implements OnInit {
     let value = event.value,
         questionIndex = event.source.name;
         this.subject.questions[questionIndex].studentAnswer = value
-        console.log( this.subject.questions[questionIndex].studentAnswer)
+        console.log( this.subject.questions)
   }
   checkValidExam() {
     for(let x in this.usersubjects) { 
@@ -65,26 +68,36 @@ export class ExamComponent implements OnInit {
   getResult() {
     this.total = 0
     for(let x in this.subject.questions) {
-      if(this.subject.questions[x].studentAnswer== this.subject.questions[x].correctAnswer) {
+      if(this.subject.questions[x].studentAnswer== this.subject.questions[x].correctanswer)
+       {
         this.total++
-        console.log(this.subject.questions[x].studentAnswer)
+       
       }
 
     }
+    
     this.showResult = true
     this.usersubjects.push({
-      name:this.subject.name,
+      name:this.subject.coursename,
       id:this.id,
       degree:this.total
     })
     const model = {
-      username: this.studentInfo.username,
+      name: this.studentInfo.name,
       email: this.studentInfo.email,
       password: this.studentInfo.password,
       subjects : this.usersubjects
     }
+
+    this.auth.updateStudent(this.user.userId,model).subscribe(res=>{
+this.toaster.success("The result has been registered successfully");
+    })
   }
-  deleteQuestion(index:number) {
+
+
+
+
+  deleteSubject(index:number) {
     this.subject.questions.splice(index, 1);
     const model={
       name :this.subject.name,
@@ -92,6 +105,14 @@ export class ExamComponent implements OnInit {
     }
     this.service.update(model ,this.id).subscribe(res => {
       this.toaster.success("Question has been successfully deleted");});
-      }
+      
+    }
     
+
+
+    
+    
+  
+
+
 }
