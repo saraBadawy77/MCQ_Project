@@ -27,6 +27,11 @@
           "name": "java script",
           "id": "4",
           "degree": 0
+        },
+        {
+          "name": "HTML",
+          "id": "7",
+          "degree": 1
         }
       ],
       "id": 4
@@ -66,6 +71,24 @@
         }
       ],
       "id": 7
+    },
+    {
+      "name": "Ahmed",
+      "email": "ahmed@msq.com",
+      "password": "123456",
+      "subjects": [
+        {
+          "name": "CSS",
+          "id": "6",
+          "degree": 1
+        },
+        {
+          "name": "java script",
+          "id": "4",
+          "degree": 0
+        }
+      ],
+      "id": 8
     }
   ],
   "login": [
@@ -100,6 +123,42 @@
         }
       ],
       "id": 5
+    },
+    {
+      "coursename": "CSS",
+      "questions": [
+        {
+          "question": "5+6",
+          "answer1": "11",
+          "answer2": "12",
+          "correctanswer": "11"
+        },
+        {
+          "question": "30+30",
+          "answer1": "60",
+          "answer2": "70",
+          "correctanswer": "60"
+        }
+      ],
+      "id": 6
+    },
+    {
+      "coursename": "HTML",
+      "questions": [
+        {
+          "question": "5+6",
+          "answer1": "11",
+          "answer2": "12",
+          "correctanswer": "11"
+        },
+        {
+          "question": "20+30",
+          "answer1": "50",
+          "answer2": "55",
+          "correctanswer": "50"
+        }
+      ],
+      "id": 7
     }
   ]
 }
